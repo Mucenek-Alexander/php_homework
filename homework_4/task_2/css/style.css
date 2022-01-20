@@ -1,0 +1,10 @@
+body {
+    position: relative;
+}
+
+.pop-up {
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    border: black solid 2px;
+}

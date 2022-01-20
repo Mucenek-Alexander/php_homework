@@ -34,3 +34,11 @@ $items = [
 ];
 
 echo json_encode ($items);
+
+
+$server = $_SERVER;
+var_dump($server);
+if ($server['REQUEST_METHOD'] === 'GET') {
+    $get = $_GET;
+    var_dump($get);
+};
