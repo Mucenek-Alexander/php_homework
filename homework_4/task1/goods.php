@@ -18,7 +18,7 @@ $goods = require_once 'items-data.php';
         <p><?= $good['price'] ?></p>
         <img src="images/<?=$good['image'] ?>" alt="<?= $good['image'] ?>" style="max-width: 400px">
         <a data-id="<?= $good['id'] ?>" href="goods.php?id=<?= $good['id'] ?>">Подробнее</a>
-        <p data-id="no_text"></p>
+        <p id="no_text"></p>
     </div>
     <? endforeach; ?>
 </main>
