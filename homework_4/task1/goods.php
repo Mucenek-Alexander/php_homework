@@ -15,14 +15,16 @@ $goods = require_once 'items-data.php';
     <? foreach ($goods as $good): ?>
     <div>
         <h2><?= $good['title'] ?></h2>
-        <p><?= $good['price'] ?></p>
+        <p>Стоимость: <?= $good['price'] ?> р.</p>
         <img src="images/<?=$good['image'] ?>" alt="<?= $good['image'] ?>" style="max-width: 400px">
-        <a data-id="<?= $good['id'] ?>" href="goods.php?id=<?= $good['id'] ?>">Подробнее</a>
-        <p id="no_text"></p>
+        <? if ($good['count'] > 0): ?>
+            <a href="item.php?id=<?= $good['id'] ?>">Подробнее</a>
+        <?else : ?>
+            <span>Товар закончился</span>
+        <? endif; ?>
     </div>
     <? endforeach; ?>
 </main>
 
-<script src="js/script.js"></script>
 </body>
 </html>
